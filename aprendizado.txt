@@ -1,0 +1,109 @@
+APRENDER:
+######laravel praticar -> criando crm#####
+
+-----Filas
+
+As filas sempre existiu, mas por padrao e async... as filas são para quando for enviar algo de processamento demorado, em vez de executar na hora e deixar o cliente esperando, quando o cliente clicar na solicitação jogar a requisição na fila, assim liberando o usuario para continuar a navegar... e preciso criar uma tabela para criar a lista... assim pode configurar a fila para executar os jobs em 15min, 1dia... da forma que o programador configurar... Filas e pra liberar o usuário rapido em um processo lento, de requisição do cliente ao servidor..
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----Css/Less
+
+TEM QUE ESTA EM UM SERVIDOR PRA FUNCIONAR...
+less é um pré-processador:
+O que é um pré-processadores? 
+São interpretadores de código. Eles leem todo o código gerado e convertem para CSS minificado ou não.
+Usar cdn ou baixar o pacote.
+Com less pode programar css com variaveis, funções e outros.
+https://lesscss.org/
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----Docker
+
+Aprender a conectar o container docker msyql com alguma aplicação php ou laravel, ver de novo o video do japones e ver tambem a aula de docker-compose...
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----lambda aws
+
+##Cria função em serveless, SERVELESS = sem necessidade de configurar servidor, so copiar a função ou subir em uma pasta zipada...
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----load balance e auto scaling(Auto scaling horizontal)
+
+##O Auto scaling horizontal funciona com alguma METRICA estipulado, como por exemplo a CPU, se a CPU atingir mais que 80%, o auto scaling levanta mais uma instancia... e passa para o load balance criado e anexo a esse auto scaling, os IPs de todas as intancias criadas 'EM PÉ'.
+
+##Load balance HTTP, recebe a lista de IPs do auto scaling e redireciona as solicitações dos usuários para a instancia mas ideal...
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----PHPUnit testes
+
+##Criar testes de unidade, com apenas um metodo... ou integração quando os metodos são testados juntos...
+https://www.youtube.com/watch?v=z5RerQfPcvE
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----lumem microframework PHP para APIs Microsserviços
+
+##para criar apis e microserviços
+https://www.youtube.com/watch?v=vo1mYcM1lIA
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----o que é microserviços e monolitico
+
+##Arquitetura Microserviços##
+A ideia da arquitetura em microserviços, é desenvolver uma única aplicação formada por um conjunto de pequenos serviços independentes, ou seja, cada microserviço terá sua própria tecnologia aplicada, e também poderá ser separada em vários servidores diferentes.
+Como já falamos anteriormente a estrutura de microserviços fica na camada de back-end da aplicação, com isso o responsável pela chamada desses microserviços é o front-end via protocolo HTTP 'API'.
+
+
+##Arquitetura Monolítica##
+Para começarmos a falar sobre microserviços, temos que falar de como tradicionalmente são criadas as arquiteturas para uma aplicação.
+A arquitetura tradicional que denominamos monolítica, é um agrupamento de funcionalidades dentro de um grande sistema, ou seja, é um grande e único pacote com tudo dentro.
+Para utilizarmos esse grande sistema monolítico temos que aplicar em um servidor, e não é possível reparti-lo por contexto em mais de uma máquina, assim consumindo recursos de processamento, memória e banco de dados.
+A arquitetura monolítica sempre estará no lado do servidor, ou seja, seu back-end é desenvolvido nessa arquitetura.
+
+LINK_FONTE: https://cursofacilonline.com/o-que-sao-microservicos/#:~:text=A%20ideia%20da%20arquitetura%20em%20microservi%C3%A7os%2C%20%C3%A9%20desenvolver,tamb%C3%A9m%20poder%C3%A1%20ser%20separada%20em%20v%C3%A1rios%20servidores%20diferentes.
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+/-------------------------------------------------------------------------------------------------------------------/
+-----API Gateway
+
+Em uma aplicação muito grande, a chamada HTTP pode ser um problema, pois controlar muitos endpoints e replicar autenticações e autorizações para cada um seria muito complexo.
+Para resolver esse problema sem utilizar de alguma gambiarra, existe uma solução que  denominamos como API Gateway.
+O Api Gateway seria um orquestrador de chamadas para os microserviços, é nele que ficaria centralizado os endpoints, controle de requisições e as autenticações para cadas serviço.
+Portanto com essa solução o front-end passaria a realizar apenas um request HTTP para o API Gateway, e ele faria o restante do trabalho.
+Apenas ressaltando que esse caso seria recomendado caso existissem muitos microserviços onde ficaria difícil o controle pela camada de Client-Side(Front-End).
+
+LINK_FONTE: https://cursofacilonline.com/o-que-sao-microservicos/#:~:text=A%20ideia%20da%20arquitetura%20em%20microservi%C3%A7os%2C%20%C3%A9%20desenvolver,tamb%C3%A9m%20poder%C3%A1%20ser%20separada%20em%20v%C3%A1rios%20servidores%20diferentes.
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+-----Polimorfismo
+
+Polimorfismo simplesmente significa reescrever um método da superclasse na subclasse, e assim podendo determinar novos comportamentos desse método.
+
+-----Abstração de Classes
+
+O PHP possui métodos e classes abstratas. Classes definidas como abstratas não podem ser instanciadas, e qualquer classe que contenha ao menos um método abstrato também deve ser abstrata. Métodos são definidos como abstratos declarando a intenção em sua assinatura, e não podem definir a implementação.
+
+Quando herdando de uma classe abstrata, todos os métodos marcados como abstratos da classe herdada precisam ser definidos na classe implementante. além de seguir as regras usuais de herança e compatibilidade de assinatura.
+
+-----Interfaces de Objetos
+
+Interfaces de objetos permitem a criação de códigos que especificam quais métodos uma classe deve implementar, sem definir como esses métodos serão tratados.
+
+Interfaces são definidas da mesma forma que classes, mas com a palavra-chave interface substituindo class e com nenhum dos métodos tendo seu conteúdo definido.
+
+Todos os métodos declarados em uma interface devem ser públicos, essa é a natureza de uma interface.
+
+
+/-------------------------------------------------------------------------------------------------------------------/
+
+end: escola municipal professora cecy cardoso porfirio
+
+
